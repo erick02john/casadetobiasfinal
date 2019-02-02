@@ -1,0 +1,8 @@
+.navbar-inverse{
+	list-style-type: none;
+    margin: 0px;
+    padding: 15px;
+    position: fixed;
+	width: 100%;
+	opacity: 1;
+}
