@@ -195,7 +195,7 @@ include('../../include.php');
                 </tr>
                 <tr>
                   <th>Down Payment:</th>
-                  <td><b>₱ <?=formatnumber2(($totalprice + $paymentwithvat) / 2);?></td>
+                  <td><b>₱ <?=formatnumber2(($subtotal + $paymentwithvat) / 2);?></td>
                 </tr>
                 <tr>
                 <?php

@@ -18,11 +18,11 @@ $sql = "SELECT * FROM room WHERE roomid = '".$id."'";
                             LEFT JOIN roomreserve
                                 ON (room.roomid = roomreserve.roomid)
                                     AND (Cin <= '".formatdate3($dte1)."' AND Cout >= '".formatdate3($dte2)."')
-                            GROUP BY 
+                            GROUP BY
                                 room.roomid";
                             $query = mysql_query($sql1, $connection) or die ("Database Connection Failed");
                             $result1 = mysql_fetch_assoc($query);
-             
+
             $roomtype = $row['roomtype'];
             $roomprice = $row['roomprice'];
             $roomcapacity = $row['roomcapacity'];
@@ -30,7 +30,7 @@ $sql = "SELECT * FROM room WHERE roomid = '".$id."'";
             $additional = $row['additional'];
             $roomimg = $row['roomimg'];
           }
-?>                  
+?>
                   <div style="font-size: 18px;">
                   <div class="col-md-6">
                     <div class="form-group">
@@ -69,5 +69,5 @@ $sql = "SELECT * FROM room WHERE roomid = '".$id."'";
                         <button class="btn btn-info">Next</button>
                     </div>
                   </div>
-                  
+
                 </div>

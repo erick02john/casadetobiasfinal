@@ -69,20 +69,17 @@ if(!$_GET){
                     $sql = "SELECT * FROM room";
                     $result = $con->query($sql);
                         while($row=$result->fetch_assoc()){
-                            $sql1 = "
-                            SELECT room.roomid,
-                                  room.roomtype,
-                                  room.roomprice,
-                                  room.roomcapacity,
-                                  room.roomavailable,
-                                  COUNT(roomreserve.roomid) AS cntres
+                            $sql1 = "SELECT room.roomid,
+                                            room.roomtype,
+                                            room.roomprice,
+                                            room.roomcapacity,
+                                            COUNT(roomreserve.roomid) AS cntres
                             FROM
                                 room
-                            LEFT JOIN roomreserve
-                                ON (room.roomid = roomreserve.roomid)
-                                    AND (Cin <= '".formatdate3($_GET['dtefrom'])."' AND Cout >= '".formatdate3($_GET['dteto'])."')
-                            GROUP BY
-                                room.roomid";
+                            LEFT JOIN roomreserve ON room.roomid = roomreserve.roomid
+                            AND Cin <= '".formatdate3($_GET['dtefrom'])."'
+                            AND Cout >= '".formatdate3($_GET['dteto'])."'
+                            GROUP BY room.roomid" ;
                             $query = mysqli_query($connection,$sql1) or die ("Database Connection Failed");
                             $result1 = mysqli_fetch_assoc($query);
 
@@ -90,7 +87,7 @@ if(!$_GET){
                             $roomtype = $row['roomtype'];
                             $roomprice = $row['roomprice'];
                             $roomcapacity = $row['roomcapacity'];
-                            $roomavailable = $row['roomavailable'] - $result1['cntres'];
+                            $roomavailable = $row['roomavailable'] - $result1["cntres"];
                             $additional = $row['additional'];
                             $roomimg = $row['roomimg'];
                             ?>
@@ -124,7 +121,7 @@ if(!$_GET){
                       </div>
 
                       <div class="form-group">
-                        <label for="roomadditional">Room Available</label>
+                        <label for="roomavailable">Room Available</label>
                       </div>
                     </div>
                   </div>

@@ -5,7 +5,7 @@ include('db.php');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>CASA DE TOBIAS MOUINTAIN RESORT</title>
+<title>CASA DE TOBIAS MOUNTAIN RESORT</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -44,7 +44,7 @@ include('navlinks.php');
 
 							<div class="container">
 								<div class="agileits-banner-info">
-								<h4>CASA DE TOBIAS MOUINTAIN RESORT</h4>
+								<h4>CASA DE TOBIAS MOUNTAIN RESORT</h4>
 									<h3>Come join us to experience a relaxing place in Nagcarlan, Laguna</h3>
 										<p>Welcome to our Hotel and Resort in Laguna</p>
 									<div class="agileits_w3layouts_more menu__item">
@@ -58,7 +58,7 @@ include('navlinks.php');
 						<div class="w3layouts-banner-top w3layouts-banner-top1">
 							<div class="container">
 								<div class="agileits-banner-info">
-								<h4>Casa de Tobias Resort</h4>
+								<h4>CASA DE TOBIAS MOUNTAIN RESORT</h4>
 									<h3>Experience a wonderful scenery in our resort</h3>
 										<p></p>
 									<div class="agileits_w3layouts_more menu__item">
@@ -72,7 +72,7 @@ include('navlinks.php');
 						<div class="w3layouts-banner-top w3layouts-banner-top2">
 							<div class="container">
 								<div class="agileits-banner-info">
-								<h4>Casa de Tobias</h4>
+								<h4>CASA DE TOBIAS MOUNTAIN RESORT</h4>
 								<h3></h3>
 										<p>Get a Reservation Today!</p>
 									<div class="agileits_w3layouts_more menu__item">
@@ -98,7 +98,7 @@ include('navlinks.php');
 								<div class="modal-content">
 									<div class="modal-header">
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
-										<h4>Casa de Tobias  <span>Resort</span></h4>
+										<h4>CASA DE TOBIAS MOUNTAIN RESORT<span>Resort</span></h4>
 										<img src="images/1.jpg" alt=" " class="img-responsive">
 										<h5></h5>
 										<p>Enjoy the refreshness of the Mountain Resort</p>
@@ -116,31 +116,77 @@ include('navlinks.php');
 <!-- /about -->
  	<div class="about-wthree" id="about">
 		  <div class="container">
-				   <div class="ab-w3l-spa">
+				   <div class="ab-w3l-spa" style="font-size:25px;">
                             <h3 class="title-w3-agileits title-black-wthree">Casa de Tobias</h3>
-						   <p class="about-para-w3ls"></p>
-						   <img src="images/homepage.jpg" class="img-responsive" alt="Hair Salon">
-                                       <div class="w3ls-info-about">
-										    <h4>Casa de Tobias</h4>
-											<p>
-												Casa De Tobias Mountain Resort is located in Alibungbungan, Nagcarlan, Laguna. The resort established in 1998. There are series of episodes of renovations like repainting, landscaping, carpentry,
-												while keeping the resort is open. The resort has seventeen (17) rooms that can cater to the customer's need. Casa de Tobias has a huge adult pool, kiddie pool and a man-made river that usually use for team buildings.
-												The resort has a clubhouse which is rented to host group meetings, seminars, and trainings that typically accompanies corporate outings and whole family trips.
-												The resort have country-inspired cabins and nipa huts that are great for families, Barkadas get away and group retreats.</p>
-											<p>	Casa de Tobias Resort can give you a relaxing scenery that helps you to enjoy and forgot all the problems in workloads even the school works.
-												the ambiance of the resort is nature-friendly that you can experience a heaven and peaceful view with sounds of birds outside of the resort. you may also experience a breath taking view of mouintains near in the resort.
-												The resort is very far from the pollution in manila that you experience.
-												The environment is very natural and pure, when you go around the place the sounds of the water flowing coming from the man made river or called "Sapa".
-												</p>
-										</div>
+														<h2>Casa de Tobias</h2>
+														<p>
+														Casa De Tobias Mountain Resort is located in Alibungbungan, Nagcarlan, Laguna. The resort established in 1998. There are series of episodes of renovations like repainting, landscaping, carpentry,
+														while keeping the resort is open. The resort has seventeen (17) rooms that can cater to the customer's need. Casa de Tobias has a huge adult pool, kiddie pool and a man-made river that usually use for team buildings.
+														The resort has a clubhouse which is rented to host group meetings, seminars, and trainings that typically accompanies corporate outings and whole family trips.
+														The resort have country-inspired cabins and nipa huts that are great for families, Barkadas get away and group retreats.</p>
+														<p>	Casa de Tobias Resort can give you a relaxing scenery that helps you to enjoy and forgot all the problems in workloads even the school works.
+														the ambiance of the resort is nature-friendly that you can experience a heaven and peaceful view with sounds of birds outside of the resort. you may also experience a breath taking view of mouintains near in the resort.
+														The resort is very far from the pollution in manila that you experience.
+														The environment is very natural and pure, when you go around the place the sounds of the water flowing coming from the man made river or called "Sapa".
+														</p>
 		          </div>
 		   	<div class="clearfix"> </div>
     </div>
 </div>
  	<!-- //about -->
-			<div class="copy">
-		      <!--  <p>© 2018 . All Rights Reserved | Design by <a href="index.php">SUNRISE</a> </p>-->
-		    </div>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<div class="gradient">
+		<div class="homepage globalpage_new page"></div>
+		<div class="row">
+			<div class="col-lg-6 col-md-3 m-5">
+				<div class="footer-block">
+					<h3 class="footer-block-title"><p>Site</p></h3>
+					<div class="row">
+						<div class="col-md-12 col-lg-6 m-5">
+							<ul class="list-unstyled">
+								<li>
+									<a href="/" target="_self">Home</a>
+								</li>
+								<li>
+									<a href="/about" target="_self">The Resort</a>
+								</li>
+								<li>
+									<a href="/gallery" target="_self">Gallery</a>
+								</li>
+								<li>
+									<a href="/contact" target="_self">Contact Us</a>
+								</li>
+								<li>
+									<a href="/Rooms" target="_self">Rooms</a>
+								</li>
+								<li class="list-inline-item">
+									<a href="/privacy-policy.html">Privacy Policy</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-sm-4">
+				<div class="footer-block">
+					<h3 class="footer-block-title"><p>RESERVATION</p></h3>
+					<ul class="list-unstyled">
+						<li><a class="icon-link icon-link-mobile" href="tel:+6566888888">(02) 794 3471
+						</a></li>
+						<li><a class="icon-link icon-link-mobile" href="tel:+6566888826">+63 917 9789 141</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	<div class="row">
+		<div class="col"><br>
+				<p class="copyright">© 2019 Casa de Tobias Mountain Resort. All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
 <!--/footer -->
 <!-- js -->
 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>

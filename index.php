@@ -5,7 +5,7 @@ include('db.php');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>CASA DE TOBIAS RESORT MOUINTAIN RESORT</title>
+<title>CASA DE TOBIAS MOUNTAIN RESORT</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -44,7 +44,7 @@ include('navlinks.php');
 
 							<div class="container">
 								<div class="agileits-banner-info">
-								<h4>CASA DE TOBIAS MOUINTAIN RESORT</h4>
+								<h4>CASA DE TOBIAS MOUNTAIN RESORT</h4>
 									<h3>Come join us to experience a relaxing place in Nagcarlan, Laguna</h3>
 										<p>Welcome to our Hotel and Resort in Laguna</p>
 									<div class="agileits_w3layouts_more menu__item">
@@ -58,7 +58,7 @@ include('navlinks.php');
 						<div class="w3layouts-banner-top w3layouts-banner-top1">
 							<div class="container">
 								<div class="agileits-banner-info">
-								<h4>CASA DE TOBIAS RESORT MOUINTAIN RESORT</h4>
+								<h4>CASA DE TOBIAS MOUNTAIN RESORT</h4>
 									<h3>Experience a wonderful scenery in our resort</h3>
 										<p></p>
 									<div class="agileits_w3layouts_more menu__item">
@@ -72,7 +72,7 @@ include('navlinks.php');
 						<div class="w3layouts-banner-top w3layouts-banner-top2">
 							<div class="container">
 								<div class="agileits-banner-info">
-								<h4>CASA DE TOBIAS RESORT MOUINTAIN RESORT</h4>
+								<h4>CASA DE TOBIAS MOUNTAIN RESORT</h4>
 								<h3></h3>
 										<p>Get a Reservation Today!</p>
 									<div class="agileits_w3layouts_more menu__item">
@@ -188,11 +188,60 @@ include('navlinks.php');
   <!-- visitors -->
 
   <!-- visitors -->
-			<div class="copy">
-		      <!--  <p>© 2018 . All Rights Reserved | Design by <a href="index.php">SUNRISE</a> </p>-->
-		    </div>
-<!--/footer -->
-<!-- js -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<div class="gradient">
+		<div class="homepage globalpage_new page"></div>
+		<div class="row">
+			<div class="col-lg-6 col-md-3 m-5">
+				<div class="footer-block">
+					<h3 class="footer-block-title"><p>Site</p></h3>
+					<div class="row">
+						<div class="col-md-12 col-lg-6 m-5">
+							<ul class="list-unstyled">
+								<li>
+									<a href="/" target="_self">Home</a>
+								</li>
+								<li>
+									<a href="/about" target="_self">The Resort</a>
+								</li>
+								<li>
+									<a href="/gallery" target="_self">Gallery</a>
+								</li>
+								<li>
+									<a href="/contact" target="_self">Contact Us</a>
+								</li>
+								<li>
+									<a href="/Rooms" target="_self">Rooms</a>
+								</li>
+								<li class="list-inline-item">
+									<a href="/privacy-policy.html">Privacy Policy</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-sm-4">
+				<div class="footer-block">
+					<h3 class="footer-block-title"><p>RESERVATION</p></h3>
+					<ul class="list-unstyled">
+						<li><a class="icon-link icon-link-mobile" href="tel:+6566888888">(02) 794 3471
+						</a></li>
+						<li><a class="icon-link icon-link-mobile" href="tel:+6566888826">+63 917 9789 141</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	<div class="row">
+		<div class="col"><br>
+				<p class="copyright">© 2019 Casa de Tobias Mountain Resort. All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 <!-- contact form -->
 <script src="js/jqBootstrapValidation.js"></script>

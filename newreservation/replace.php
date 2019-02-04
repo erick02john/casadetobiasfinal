@@ -6,23 +6,21 @@ $dte2 = $_POST['dte2'];
 $sql = "SELECT * FROM room WHERE roomid = '".$id."'";
     $result = $con->query($sql);
         while($row=$result->fetch_assoc()){
-            $sql1 = "
-                            SELECT room.roomid,
-                                  room.roomtype,
-                                  room.roomprice,
-                                  room.roomcapacity,
-                                  room.roomavailable,
-                                  COUNT(roomreserve.roomid) AS cntres
-                            FROM
-                                room
-                            LEFT JOIN roomreserve
-                                ON (room.roomid = roomreserve.roomid)
-                                    AND (Cin <= '".formatdate3($dte1)."' AND Cout >= '".formatdate3($dte2)."')
-                            GROUP BY 
-                                room.roomid";
-                            $query = mysqli_query($connection,$sql1) or die ("Database Connection Failed");
-                            $result1 = mysqli_fetch_assoc($query);
-             
+            $sql1 = "SELECT room.roomid,
+                            room.roomtype,
+                            room.roomprice,
+                            room.roomcapacity,
+                            room.roomavailable,
+                            COUNT(roomreserve.roomid) AS cntres
+                    FROM
+                        room
+                    LEFT JOIN roomreserve
+                        ON (room.roomid = roomreserve.roomid)
+                            AND (Cin <= '".formatdate3($dte1)."' AND Cout >= '".formatdate3($dte2)."')
+                    GROUP BY room.roomid";
+                    $query = mysqli_query($connection,$sql1) or die ("Database Connection Failed");
+                    $result1 = mysqli_fetch_assoc($query);
+
             $roomtype = $row['roomtype'];
             $roomprice = $row['roomprice'];
             $roomcapacity = $row['roomcapacity'];
@@ -30,7 +28,7 @@ $sql = "SELECT * FROM room WHERE roomid = '".$id."'";
             $additional = $row['additional'];
             $roomimg = $row['roomimg'];
           }
-?>                  
+?>
                   <div style="font-size: 18px;">
                   <div class="col-md-6">
                     <div class="form-group">
@@ -60,7 +58,7 @@ $sql = "SELECT * FROM room WHERE roomid = '".$id."'";
 
                     <div class="form-group">
                       <label for="roomadditional">Room Available :</label>
-                      <label for="roomcap"><?=$roomavailable;?></label>
+                      <label for="roomavailable"><?=$roomavailable;?></label>
                       <input type="hidden" name="roomavailable" class="form-control" id="roomavailable" value="<?=$roomavailable;?>">
                     </div>
                   </div>
@@ -69,5 +67,5 @@ $sql = "SELECT * FROM room WHERE roomid = '".$id."'";
                         <button class="btn btn-info">Next</button>
                     </div>
                   </div>
-                  
+
                 </div>

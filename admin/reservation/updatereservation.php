@@ -13,7 +13,9 @@ if(isset($_GET['doupdatereserve']))
     $sql = "SELECT * FROM room WHERE roomid = '".$id."'";
     $result = $con->query($sql);
         while($row=$result->fetch_assoc()){
-            $sql1 = "SELECT roomid,sum(NRoom) as NRoomAvail FROM roomreserve WHERE roomid = '".$row['roomid']."'";
+            $sql1 = "SELECT roomid,sum(NRoom) as NRoomAvail
+            FROM roomreserve
+            WHERE roomid = '".$row['roomid']."'";
             $query = mysqli_query($connection,$sql1) or die ("Database Connection Failed");
             $result1 = mysqli_fetch_assoc($query);
 
@@ -77,9 +79,9 @@ if(isset($_GET['doupdatereserve']))
 
 <body onpaste="return false">
     <div class="wrapper">
-      
+
         <div class="main-panel">
-            
+
                     <div class="col-sm-9 col-sm-offset-0">
                         <!--      Wizard container        -->
                         <div class="wizard-container">
@@ -89,13 +91,13 @@ if(isset($_GET['doupdatereserve']))
                                     <!--        You can switch " data-color="purple" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
                                     <div class="wizard-header">
                                         <h3 class="wizard-title">
-                                            Reservation 
+                                            Reservation
                                         </h3>
                                         <h5>This information will let us know more about you.</h5>
                                     </div>
                                     <div class="wizard-navigation">
                                         <ul>
-                                            
+
                                             <li>
                                                 <a href="#roominfo" style="pointer-events: none;" data-toggle="tab"  disabled="true">Room Information</a>
                                             </li>
@@ -106,15 +108,15 @@ if(isset($_GET['doupdatereserve']))
                                                 <a href="#guest" style="pointer-events: none;" data-toggle="tab">Guest Information</a>
                                             </li>
 
-                                          
+
                                         </ul>
                                     </div>
                                     <div class="tab-content">
-                                    
+
                                                 <div class="tab-pane" id="roominfo">
                                                 <div class="row">
                                                     <h4 class="info-text">ROOM</h4>
-                                                    
+
                                                         <div class="col-sm-6">
                                                         <div class="input-group">
                                                             <span class="input-group-addon">
@@ -140,12 +142,12 @@ if(isset($_GET['doupdatereserve']))
 
 
 
-                                                                                echo '<option value="'.$row55['roomid'].'" '.(($row55['roomid'] == $id) ?"selected":"").' '.(($roomavailable > 0) ? "":"disabled").'>'.$row55['roomtype'].' '.(($roomavailable > 0) ? "":" [Not Available]").'</option>'; //close your tags!!
+                                                                                echo '<option value="'.$row55['roomid'].'" '.(($row55['roomid'] == $id) ?"selected":"").' '.(($roomavailable1 > 0) ? "":"disabled").'>'.$row55['roomtype'].' '.(($roomavailable1 > 0) ? "":" [Not Available]").'</option>'; //close your tags!!
                                                                               }
 
                                                                     ?>
                                                                 </select>
-                                                               
+
                                                             </div>
                                                         </div>
                                                         </div>
@@ -195,7 +197,7 @@ if(isset($_GET['doupdatereserve']))
                                                         <div class="col-sm-5">
                                                             <div class="picture-container">
                                                                 <div>
-                                                                   
+
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -204,8 +206,8 @@ if(isset($_GET['doupdatereserve']))
 
                                                 </div>
                                             </div>
-                                     
-                                        
+
+
                                         <div class="tab-pane" id="guest">
                                             <h4 class="info-text">GUEST</h4>
                                             <div class="row">
@@ -249,7 +251,7 @@ if(isset($_GET['doupdatereserve']))
                                                     </div>
                                                 </div>
                                             </div>
-                                        
+
                                         </div>
                                         <div class="tab-pane" id="reserve">
                                              <h4 class="info-text">RESERVATION</h4>
@@ -302,7 +304,7 @@ if(isset($_GET['doupdatereserve']))
                                                             <?php
                                                             for ($x = 1; $x <= $roomavailable; $x++) {
                                                                 echo "<option value='$x' ".(($result12['NRoom'] == $x) ? "selected":"").">$x</option>";
-                                                            } 
+                                                            }
                                                             ?>
                                                         </select>
                                                     </div>
@@ -323,10 +325,10 @@ if(isset($_GET['doupdatereserve']))
                                                             <?php
                                                             for ($x = 1; $x <= $roomcapacity; $x++) {
                                                                 echo "<option value='$x' ".(($result12['NGuest'] == $x) ? "Selected":"").">$x</option>";
-                                                            } 
+                                                            }
                                                             /*foreach($number as $key => $value):
                                                             if($roomcapacity >= $value){
-                                                              echo '<option value="'.$value.'">'.$value.'</option>';   
+                                                              echo '<option value="'.$value.'">'.$value.'</option>';
                                                             }
                                                             endforeach;
                                                             */
@@ -350,7 +352,7 @@ if(isset($_GET['doupdatereserve']))
                                                             <?php
                                                             for ($x = 1; $x <= $additional; $x++) {
                                                                 echo "<option value='$x' ".(($result12['NGuest'] == $x) ? "Selected":"").">$x</option>";
-                                                            } 
+                                                            }
                                                             ?>
                                                         </select>
                                                     </div>
@@ -418,12 +420,12 @@ if(isset($_GET['doupdatereserve']))
                             </div>
                         </div>
                         <!-- wizard container -->
-                  
+
             </div>
 
         </div>
     </div>
-    
+
 </body>
 
 <!--   Core JS Files   -->
@@ -444,28 +446,28 @@ if(isset($_GET['doupdatereserve']))
 <script type="text/javascript">
     /** Days to be disabled as an array */
     var disableddates = [<?=$output?>];
-     
+
     function DisableSpecificDates(date) {
-     
+
      var m = date.getMonth();
      var d = date.getDate();
      var y = date.getFullYear();
-     
-     // First convert the date in to the mm-dd-yyyy format 
-     // Take note that we will increment the month count by 1 
+
+     // First convert the date in to the mm-dd-yyyy format
+     // Take note that we will increment the month count by 1
      var currentdate = (m + 1) + '-' + d + '-' + y ;
-     
-      // We will now check if the date belongs to disableddates array 
+
+      // We will now check if the date belongs to disableddates array
      for (var i = 0; i < disableddates.length; i++) {
-     
-     // Now check if the current date is in disabled dates array. 
+
+     // Now check if the current date is in disabled dates array.
          if ($.inArray(currentdate, disableddates) != -1 ) {
          return [false];
          }
      }
 
- return [i]; 
-     
+ return [i];
+
     }
 
      $( "#datepicker" ).datepicker({
@@ -534,9 +536,9 @@ if(isset($_GET['doupdatereserve']))
                 document.getElementById("displaytotalamount").value = 0;
             }
         }
-    }); 
+    });
 
-    
+
 
     $("#totalamount").change(function() {
         var e = document.getElementById("totalamount");
@@ -561,9 +563,9 @@ if(isset($_GET['doupdatereserve']))
         }
     });
 
-    
 
-    
+
+
 </script>
 
 
@@ -577,11 +579,11 @@ if(isset($_GET['doupdatereserve']))
 
 <script type="text/javascript">
     $(document).ready(function(){
-    $('#roomtype').change(function(e) {  
+    $('#roomtype').change(function(e) {
             var srch1 = $.trim($(this).val());
             var reserveid = <?=$roomreserveid?>
 
-            
+
             if (srch1.length > 0 || srch1.length == 0) {
                  $.ajax({
                         type:'POST',
@@ -600,8 +602,8 @@ if(isset($_GET['doupdatereserve']))
                             $('#replace2').html(data);
                         }
                     });
-                  
-            } 
+
+            }
         });
      });
 </script>

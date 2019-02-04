@@ -102,7 +102,7 @@ include('../include.php');
 
 <script type="text/javascript">
   $( "#datepicker" ).datepicker({
-        minDate: 0,
+        minDate: +2,
         maxDate: "+365D",
         onSelect: function(selected) {
         $("#datepicker1").datepicker("option","minDate", selected)

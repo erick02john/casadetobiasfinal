@@ -3231,4 +3231,13 @@ color: #fff !important;
 		margin-top: 5.5em;
 	}
 }
+.gradient{
+	background-image:
+    linear-gradient(
+      to bottom,
+      #158f53,
+      #abb6c9
+    );
+		padding: 25px;
+}
 /*--responsive--*/

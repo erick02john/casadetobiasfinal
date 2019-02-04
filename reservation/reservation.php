@@ -61,9 +61,9 @@ if(isset($_GET['id']))
 
 <body onpaste="return false">
     <div class="wrapper">
-      
+
         <div class="main-panel">
-            
+
                     <div class="col-sm-9 col-sm-offset-0">
                         <!--      Wizard container        -->
                         <div class="wizard-container">
@@ -72,13 +72,13 @@ if(isset($_GET['id']))
                                     <!--        You can switch " data-color="purple" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
                                     <div class="wizard-header">
                                         <h3 class="wizard-title">
-                                            Reservation 
+                                            Reservation
                                         </h3>
                                         <h5>This information will let us know more about you.</h5>
                                     </div>
                                     <div class="wizard-navigation">
                                         <ul>
-                                            
+
                                             <?php
                                             if(empty($id)){
                                                 ?>
@@ -105,20 +105,20 @@ if(isset($_GET['id']))
                                                 </li>
                                                 <?php
                                             }
-                                            ?>                                           
-                                          
+                                            ?>
+
                                         </ul>
                                     </div>
                                     <div class="tab-content">
                                         <?php
                                         if(empty($roomtype)){
-                                           
-                                            ?> 
+
+                                            ?>
 
                                                 <div class="tab-pane" id="roominfo">
                                                 <div class="row">
                                                     <h4 class="info-text">ROOM</h4>
-                                                    
+
                                                         <div class="col-sm-6">
                                                         <div class="input-group">
                                                             <span class="input-group-addon">
@@ -146,7 +146,7 @@ if(isset($_GET['id']))
                                                                               }
                                                                     ?>
                                                                 </select>
-                                                               
+
                                                             </div>
                                                         </div>
                                                         </div>
@@ -184,12 +184,12 @@ if(isset($_GET['id']))
                                                                     <input name="roomavailable" type="hidden" class="form-control" id="roomavailable" value="" readonly>
                                                                 </div>
                                                             </div>
-                                                           
+
                                                         </div>
                                                         <div class="col-sm-5">
                                                             <div class="picture-container">
                                                                 <div>
-                                                                   
+
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -266,7 +266,7 @@ if(isset($_GET['id']))
                                             <?php
                                       }
                                         ?>
-                                        
+
                                         <div class="tab-pane" id="guest">
                                             <h4 class="info-text">GUEST</h4>
                                             <div class="row">
@@ -310,7 +310,7 @@ if(isset($_GET['id']))
                                                     </div>
                                                 </div>
                                             </div>
-                                        
+
                                         </div>
                                         <div class="tab-pane" id="reserve">
                                              <h4 class="info-text">RESERVATION</h4>
@@ -363,7 +363,7 @@ if(isset($_GET['id']))
                                                             <?php
                                                             for ($x = 1; $x <= $roomavailable; $x++) {
                                                                 echo "<option value='$x'>$x</option>";
-                                                            } 
+                                                            }
                                                             ?>
                                                         </select>
                                                     </div>
@@ -384,10 +384,10 @@ if(isset($_GET['id']))
                                                             <?php
                                                             for ($x = 1; $x <= $roomcapacity; $x++) {
                                                                 echo "<option value='$x'>$x</option>";
-                                                            } 
+                                                            }
                                                             /*foreach($number as $key => $value):
                                                             if($roomcapacity >= $value){
-                                                              echo '<option value="'.$value.'">'.$value.'</option>';   
+                                                              echo '<option value="'.$value.'">'.$value.'</option>';
                                                             }
                                                             endforeach;
                                                             */
@@ -411,7 +411,7 @@ if(isset($_GET['id']))
                                                             <?php
                                                             for ($x = 1; $x <= $additional; $x++) {
                                                                 echo "<option value='$x'>$x</option>";
-                                                            } 
+                                                            }
                                                             ?>
                                                         </select>
                                                     </div>
@@ -480,12 +480,12 @@ if(isset($_GET['id']))
                             </div>
                         </div>
                         <!-- wizard container -->
-                  
+
             </div>
 
         </div>
     </div>
-    
+
 </body>
 
 <!--   Core JS Files   -->
@@ -506,28 +506,28 @@ if(isset($_GET['id']))
 <script type="text/javascript">
     /** Days to be disabled as an array */
     var disableddates = [<?=$output?>];
-     
+
     function DisableSpecificDates(date) {
-     
+
      var m = date.getMonth();
      var d = date.getDate();
      var y = date.getFullYear();
-     
-     // First convert the date in to the mm-dd-yyyy format 
-     // Take note that we will increment the month count by 1 
+
+     // First convert the date in to the mm-dd-yyyy format
+     // Take note that we will increment the month count by 1
      var currentdate = (m + 1) + '-' + d + '-' + y ;
-     
-      // We will now check if the date belongs to disableddates array 
+
+      // We will now check if the date belongs to disableddates array
      for (var i = 0; i < disableddates.length; i++) {
-     
-     // Now check if the current date is in disabled dates array. 
+
+     // Now check if the current date is in disabled dates array.
          if ($.inArray(currentdate, disableddates) != -1 ) {
          return [false];
          }
      }
 
- return [i]; 
-     
+ return [i];
+
     }
 
      $( "#datepicker" ).datepicker({
@@ -596,9 +596,9 @@ if(isset($_GET['id']))
                 document.getElementById("displaytotalamount").value = 0;
             }
         }
-    }); 
+    });
 
-    
+
 
     $("#totalamount").change(function() {
         var e = document.getElementById("totalamount");
@@ -623,9 +623,9 @@ if(isset($_GET['id']))
         }
     });
 
-    
 
-    
+
+
 </script>
 
 
@@ -639,10 +639,10 @@ if(isset($_GET['id']))
 
 <script type="text/javascript">
     $(document).ready(function(){
-    $('#roomtype').change(function(e) {  
+    $('#roomtype').change(function(e) {
             var srch1 = $.trim($(this).val());
-            
-            
+
+
             if (srch1.length > 0 || srch1.length == 0) {
                  $.ajax({
                         type:'POST',
@@ -661,8 +661,8 @@ if(isset($_GET['id']))
                             $('#replace2').html(data);
                         }
                     });
-                  
-            } 
+
+            }
         });
      });
 </script>
